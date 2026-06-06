@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">URBAN THREADS</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="SHOP.HTML">Shop</a>
+        <a href="MEN.HTML">Men</a>
+        <a href="WOMEN.HTML">Women</a>
+        <a href="CONTACT.HTML">Contact</a>
+        <a href="BILLING.HTML">Billing</a>
+    </nav>
+</header>
+
+<section class="contact">
+
+<h1>Contact Us</h1>
+
+<form id="contactForm">
+
+<input type="text" id="contactName" placeholder="Name" required>
+
+<input type="email" id="contactEmail" placeholder="Email" required>
+
+<textarea id="contactMessage" placeholder="Message" required></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+<script>
+    (function () {
+        const form = document.getElementById('contactForm');
+        if (!form) return;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = (document.getElementById('contactName').value || '').trim();
+            const email = (document.getElementById('contactEmail').value || '').trim();
+            const message = (document.getElementById('contactMessage').value || '').trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill all fields.');
+                return;
+            }
+
+            alert('Message sent successfully ✅');
+            form.reset();
+        });
+    })();
+</script>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urban Threads</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+header{
+    background:black;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.cart-box{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+.cart-box button{
+    padding:8px 15px;
+    margin-left:10px;
+    cursor:pointer;
+}
+
+.products{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:50px;
+}
+
+.card{
+    width:250px;
+    box-shadow:0 0 10px gray;
+    text-align:center;
+    padding:15px;
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin-top:15px;
+}
+
+.card p{
+    margin:10px 0;
+    font-size:22px;
+}
+
+.card button{
+    background:black;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#444;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">URBAN THREADS</div>
+
+<nav>
+        <a href="index.html">Home</a>
+        <a href="SHOP.HTML">Shop</a>
+        <a href="MEN.HTML">Men</a>
+        <a href="WOMEN.HTML">Women</a>
+        <a href="CONTACT.HTML">Contact</a>
+        <a href="BILLING.HTML">Billing</a>
+</nav>
+
+</header>
+
+<div class="cart-box">
+
+🛒 Items:
+<span id="cartCount">0</span>
+
+|
+
+Total ₹
+<span id="cartTotal">0</span>
+
+<button onclick="viewCart()">View Cart</button>
+
+<button onclick="clearCart()">Clear Cart</button>
+
+<button onclick="checkout()">Checkout</button>
+
+</div>
+
+<section class="products">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600">
+
+<h3>Oversized T-Shirt</h3>
+
+<p>₹999</p>
+
+<button onclick="addToCart('Oversized T-Shirt',999)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600">
+
+<h3>Premium Hoodie</h3>
+
+<p>₹1999</p>
+
+<button onclick="addToCart('Premium Hoodie',1999)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=600">
+
+<h3>Winter Jacket</h3>
+
+<p>₹2999</p>
+
+<button onclick="addToCart('Winter Jacket',2999)">
+Add To Cart
+</button>
+
+</div>
+
+</section>
+
+<script src="cart.js"></script>
+</body>
+</html>
